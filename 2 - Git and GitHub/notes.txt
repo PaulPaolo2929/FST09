@@ -4,6 +4,8 @@ git config --global user.email "email"
 git config user.name
 git config user.email
 
+git init - Initialize Empty git repository
+
 - Legends
 U - untracked
 A - Added
