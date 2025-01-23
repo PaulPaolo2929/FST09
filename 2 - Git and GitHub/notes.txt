@@ -11,6 +11,10 @@ U - untracked
 A - Added
 M - modified
 
+The correct answer to "How do you create a new file in CLI?" is:
+touch
+The touch command is commonly used in Unix-based systems to create a new, empty file or update the timestamp of an existing file.
+
 - Check the status of all the files and folders.
 git status
 
