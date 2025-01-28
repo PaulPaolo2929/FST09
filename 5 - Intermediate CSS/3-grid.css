@@ -1,21 +1,20 @@
 .gridContainer {
-    display: grid;
-    /* width for each column. */
-    grid-template-columns: 200px 200px 200px 200px;
-    /* height for each row. */
-    grid-template-rows: 200px 200px 200px 200px;
+  display: grid;
+  /* width for each column. */
+  grid-template-columns: 200px 200px 200px 200px;
+  /* height for each row. */
+  grid-template-rows: 200px 200px 200px 200px;
 
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-columns: 33% 33% 33% 33%;
-    border: 2px solid black;
-    
-    /* Fractional Units */
-    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 33% 33% 33%;
+  border: 2px solid black;
 
-    /* Repeat(repeat_count, unit_of_measeurement) */
-    grid-template-columns: repeat(6, 1fr);
-    
-  }
+  /* Fractional Units */
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /* repeat(repeat_count, unit_of_measurement) */
+  grid-template-columns: repeat(6, 1fr);
+}
 
 /* Media Queries use Breakpoints */
 /* 
@@ -25,6 +24,9 @@
     Desktops, Large Screens: 1025px - 1200px
     Extra Large Screens, TV: 1201px and greater
 */
+
+/* 1. Desktop first approach */
+/* 2. Mobile first approach */
 
 @media screen and (min-width: 1025px) {
   .gridContainer {
@@ -42,7 +44,8 @@
   .gridContainer {
     grid-template-columns: 1fr;
   }
+
+  body {
+    background-color: #20a39e;
+  }
 }
-
-
-  
