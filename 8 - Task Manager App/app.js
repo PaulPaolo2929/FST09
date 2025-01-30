@@ -46,5 +46,44 @@ function addTodo(event) {
   todoInput.value = "";
   }
 
-function deleteOrCompleteTodo() {}
-function filterTodos() {}
+  function deleteOrCompleteTodo(event) {
+    const targetBtn = event.target;
+    if (targetBtn.classList.contains("complete-btn")) {
+      // The user marks the task as completed.
+      const todoDiv = targetBtn.parentElement;
+      todoDiv.classList.toggle("completed");
+    }
+
+    if (targetBtn.classList.contains("trash-btn")) {
+    // The user deletes the task.
+    const todoDiv = targetBtn.parentElement;
+    todoDiv.classList.add("fall");
+    todoDiv.addEventListener("transitionend", function () {
+      todoDiv.remove();
+    });
+  }
+  }
+
+  //Filter
+  function filterTodos(event) {
+    const todos = todoList.childNodes;
+    const filterValue = event.target.value;
+    todos.forEach(function (todo) {
+      if (filterValue === "all") {
+        todo.style.display = "flex";
+      } else if (filterValue === "completed") {
+        if (todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        
+      } else if (filterValue === "uncompleted") {
+        if (!todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+      }
+    });
+  }
