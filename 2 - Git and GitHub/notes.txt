@@ -53,3 +53,11 @@ git remote add origin [repository-url]
 
 git branch -M main
 
+git log --oneline --graph
+-View the Branch and commit history
+
+git clone (URL of the file you want (Other Repository))
+
+git pull origin main
+-pull the latest version of the remote repository
+
