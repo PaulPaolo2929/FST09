@@ -1,0 +1,53 @@
+ LARAVEL NOTES - STEP 1
+----------------------
+
+Laravel = PHP Framework for building web apps.
+It uses MVC pattern:
+- M (Model): Handles data/database
+- V (View): Handles HTML/output
+- C (Controller): Connects Model and View
+
+Advantages:
+- Faster development
+- Organized code
+- Secure
+- Has built-in features like routing, database migration, authentication
+
+Core Tools:
+- Artisan: Laravel’s command line tool
+- Composer: Manages packages
+- Blade: HTML templating engine
+
+Laravel can be used to build:
+- Websites, dashboards, APIs, CMS, and more.
+
+LARAVEL CORE FEATURES
+--------------------
+
+1. **Routing**  
+   ➤ Defines the website pages or URLs.  
+   ➤ Example: `/home`, `/about`, `/contact`  
+
+2. **Controllers**  
+   ➤ Acts as the "brain" of your app.  
+   ➤ Handles logic — fetch data, process it, and show the right view.  
+
+3. **Views (Blade)**  
+   ➤ Displays the HTML part of your website.  
+   ➤ Example: The visual layout that users see.  
+
+4. **Models**  
+   ➤ Connects to the database.  
+   ➤ Used to interact with tables (e.g., get, add, or update data).  
+
+5. **Migrations**  
+   ➤ Used to create or modify database tables easily.  
+   ➤ Command: `php artisan migrate`  
+
+6. **Authentication**  
+   ➤ Handles login and registration systems.  
+   ➤ Example: Users, passwords, roles.  
+
+7. **Eloquent ORM**  
+   ➤ A simple way to write database queries using PHP instead of SQL.  
+   ➤ Example: `User::all()` gets all users without writing SQL manually.
