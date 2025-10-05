@@ -49,3 +49,9 @@
     background-color: #20a39e;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

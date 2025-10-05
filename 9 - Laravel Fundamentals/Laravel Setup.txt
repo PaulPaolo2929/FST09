@@ -1,0 +1,43 @@
+🔹 Step 1: Check Requirements
+-Before installing Laravel, make sure you already have:
+-PHP (at least PHP 8.1 for Laravel 10)
+Run in CMD:
+
+php -v
+---------------------------------------------------------
+-Composer (dependency manager for PHP)
+If not installed, download from getcomposer.org.
+composer -V
+---------------------------------------------------------
+
+🔹 Step 2: Install Laravel via Composer
+-In CMD, go to the folder where you want your Laravel project:
+cd C:\xampp\htdocs
+-Replace myapp with your project name.
+Then run:
+
+composer create-project laravel/laravel myapp
+---------------------------------------------------------
+
+🔹 Step 3: Move into Project
+After installation:
+
+cd myapp
+---------------------------------------------------------
+
+🔹 Step 4: Run Laravel Development Server
+Run:
+php artisan serve
+---------------------------------------------------------
+This will start a server, usually at:
+👉 http://127.0.0.1:8000
+
+---------------------------------------------------------
+
+🔹 Step 5: Check if Laravel Works
+
+Open your browser and go to:
+
+http://127.0.0.1:8000
+
+You should see the Laravel welcome page 

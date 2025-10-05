@@ -17,9 +17,9 @@
   align-items: center;
   align-items: stretch; /* default */
 
-  flex-wrap: wrap;
-  flex-wrap: wrap-reverse;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* Wrap items to the next line if they don't fit */
+  flex-wrap: wrap-reverse; /* Wrap items to the next line in reverse order */
+  flex-wrap: nowrap; /* Do not allow items to wrap, keep them on one line */
 }
 
 .flexItem1 {

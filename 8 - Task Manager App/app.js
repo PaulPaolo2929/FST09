@@ -29,7 +29,6 @@ function addTodo(event) {
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
 
-
   // Complete Button
   const completeButton = document.createElement("button");
   completeButton.classList.add("complete-btn");
