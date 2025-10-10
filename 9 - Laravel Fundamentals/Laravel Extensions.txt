@@ -1,0 +1,51 @@
+🧰 ESSENTIAL VSCODE EXTENSIONS FOR WORKING WITH LARAVEL PROJECTS
+=================================================================
+
+💎 1. Laravel Blade Snippets
+   - Highlights and formats Blade syntax ({{ }}, @if, @foreach)
+   - Helps you write cleaner and readable HTML + Blade code
+
+⚙️ 2. Laravel Artisan
+   - Lets you run Artisan commands directly from VS Code
+   - Example: You can generate controllers, models, or migrations without opening CMD
+   - Saves time when using: php artisan make:controller, php artisan migrate, etc.
+
+🧠 3. Laravel Extra Intellisense
+   - Adds smart autocomplete for Laravel functions, routes, models, facades
+   - Example: When you type Route:: or Auth:: it suggests methods automatically
+
+🪄 4. Laravel Goto View
+   - Lets you jump directly from controller → to the view file
+   - Example: You can right-click `return view('about')` and go straight to about.blade.php
+
+📜 5. Laravel Blade Formatter
+   - Automatically formats Blade templates (indentation, spaces, etc.)
+   - Makes long HTML + Blade files organized
+
+🔍 6. Laravel Blade Spacer
+   - Adds proper spacing between {{ }} automatically
+   - Keeps your Blade files neat and readable
+
+🗂️ 7. Laravel goto Controller (optional but nice)
+   - Allows quick navigation from view → to the related controller method
+
+🧾 8. DotENV
+   - Adds syntax colors for .env file
+   - Easier to read your database, mail, and app settings
+
+🧹 9. Prettier - Code Formatter
+   - Formats HTML, CSS, JS, JSON automatically
+   - Keeps your Blade front-end part clean
+
+📁 10. Path Intellisense
+   - Autocompletes file paths when linking to Blade files, CSS, JS, or image folders
+
+------------------------------------------
+⚙️ BONUS EXTENSIONS FOR BETTER WORKFLOW
+------------------------------------------
+
+🧭 PHP Namespace Resolver
+   - Fixes or imports missing namespaces automatically
+   - Very helpful for Controllers and Models
+
+🔢 Larav

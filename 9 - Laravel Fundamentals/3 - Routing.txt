@@ -1,0 +1,93 @@
+📘 **STEP 3: ROUTING (Laravel Notes)**
+
+🧠 What is Routing?
+Routing defines how your Laravel app responds to different URLs (like `/home`, `/about`, etc.).
+All routes are stored in `routes/web.php`.
+
+---
+
+✅ Basic Example:
+
+```php
+Route::get('/', function () {
+    return view('welcome');
+});
+```
+
+➡️ When you visit `/`, Laravel shows `resources/views/welcome.blade.php`.
+
+---
+
+📄 Example for Another Page:
+
+```php
+Route::get('/about', function () {
+    return view('about');
+});
+```
+
+➡️ When you visit `/about`, it shows `resources/views/about.blade.php`.
+
+---
+
+🎯 Route Methods:
+
+| Method | Description | Example |
+|--------|--------------|----------|
+| GET | Display a page or data | `Route::get('/home', ...)` |
+| POST | Send form data | `Route::post('/submit', ...)` |
+| PUT | Update existing data | `Route::put('/update', ...)` |
+| DELETE | Delete data | `Route::delete('/remove', ...)` |
+
+---
+
+🧩 Routing with Controllers:
+
+```php
+Route::get('/students', [StudentController::class, 'index']);
+```
+
+➡️ When someone visits `/students`, Laravel runs the `index()` function in `StudentController`.
+
+---
+
+📦 Passing Data to a View:
+
+```php
+Route::get('/hello', function () {
+    return view('greeting', ['name' => 'Paul']);
+});
+```
+
+Then in `resources/views/greeting.blade.php`:
+
+```blade
+<h1>Hello, {{ $name }}!</h1>
+```
+
+Result → Hello, Paul!
+
+---
+
+📁 View Folder:
+All your views go inside `resources/views/`.
+
+Examples:
+- `resources/views/welcome.blade.php`
+- `resources/views/about.blade.php`
+
+---
+
+🧾 List All Routes:
+
+```bash
+php artisan route:list
+```
+
+---
+
+✅ **Summary:**
+- Routes live in `routes/web.php`
+- Connect URLs → pages or controllers
+- Use `Route::get()`, `Route::post()`, etc.
+- To check all routes → `php artisan route:list`

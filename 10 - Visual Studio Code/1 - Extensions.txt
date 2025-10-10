@@ -1,0 +1,59 @@
+📦 ESSENTIAL VSCODE EXTENSIONS FOR LARAVEL
+
+1. PHP Intelephense
+   🧠 Smart PHP autocompletion, error checking, and function hints.
+   🔍 Makes your PHP code faster to write and easier to debug.
+
+2. Laravel Blade Snippets
+   💎 Gives syntax highlighting for .blade.php files.
+   ✨ Helps you easily see {{ }} and @ directives in color.
+
+3. Laravel Artisan
+   ⚙️ Lets you run Artisan commands (like php artisan make:controller) directly from VS Code.
+   🚀 Super handy for generating files quickly.
+
+4. Laravel Extra Intellisense
+   🧩 Adds autocomplete for Laravel facades, routes, and models.
+   🪄 Helps when writing things like `Route::`, `Auth::`, or `User::`.
+
+5. Laravel Blade Spacer (optional)
+   🎨 Automatically formats spaces inside Blade tags {{ }}.
+   💡 Makes your HTML + Blade look clean.
+
+6. PHP Namespace Resolver
+   🧭 Helps fix missing “use” imports in your controllers and models.
+   📁 Auto-imports the correct class paths.
+
+7. DotENV
+   🔐 Adds color and syntax highlighting for your `.env` file.
+   🧾 Makes it easier to read your database credentials and settings.
+
+8. Prettier - Code Formatter
+   🧹 Formats your code automatically (HTML, JS, CSS, JSON, etc.).
+   ✨ Keeps your project neat and consistent.
+
+9. Auto Rename Tag
+   🔁 When you rename an opening HTML tag, it renames the closing one automatically.
+
+10. Path Intellisense
+    🛣️ Helps you autocomplete file paths (e.g., `view('about')` or `require('...')`).
+
+------------------------------------------
+💡 BONUS (Optional but Helpful)
+
+11. GitLens — powerful Git history & changes tracker.
+12. Laravel goto view — quickly jump between controller and Blade file.
+13. Bracket Pair Colorizer — adds color to matching brackets for readability.
+
+------------------------------------------
+⚙️ HOW TO INSTALL
+
+1️⃣ Open VS Code  
+2️⃣ Go to Extensions tab (Ctrl + Shift + X)  
+3️⃣ Search for each extension name above  
+4️⃣ Click “Install”
+
+------------------------------------------
+✅ Recommended Settings (Optional)
+After installing Prettier:
+Go to Settings → Search for “Format On Save” → ✅ Enable it.

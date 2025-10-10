@@ -1,0 +1,24 @@
+The ! + Tab shortcut for generating an HTML boilerplate 
+is a feature of the Emmet toolkit, which is built into 
+Visual Studio Code for certain file types.
+
+If it doesn't work in .blade.php files, it's because Emmet is enabled by default
+only for standard HTML files (like .html). For Blade files, VS Code may not recognize them as HTML by default.
+
+To enable Emmet in Blade files:
+
+1.Open your VS Code settings (Ctrl+,).
+2.Search for emmet.includeLanguages.
+3. Add the following setting:
+
+// Add this to your settings.json"emmet.includeLanguages": {    "blade": "html"}
+This tells VS Code to treat Blade files as HTML for Emmet, enabling shortcuts like ! + Tab.
+
+or
+
+Next is "ADD ITEM":
+ITEM(KEY):
+blade
+
+Value:
+html

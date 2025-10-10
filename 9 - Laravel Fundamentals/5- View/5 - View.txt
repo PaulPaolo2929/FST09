@@ -1,0 +1,117 @@
+LARAVEL NOTES - STEP 5 (VIEWS & BLADE TEMPLATES)
+-------------------------------------------------
+
+🧠 WHAT ARE VIEWS?
+Views are the visual part of a Laravel app. 
+They are the HTML files that show content to users.
+
+📂 Location:
+resources/views/
+
+Each page uses the .blade.php extension (Laravel’s special HTML).
+
+-------------------------------------------------
+
+⚙️ STEP 5.1 — CREATE A SIMPLE BLADE VIEW
+
+1️⃣ Create a file:
+   resources/views/home.blade.php
+
+2️⃣ Add this code:
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>Home Page</title>
+   </head>
+   <body>
+       <h1>Welcome to My Laravel Site!</h1>
+       <p>This page is built using a Blade template.</p>
+   </body>
+   </html>
+
+3️⃣ Create a route in routes/web.php:
+   Route::get('/home', function () {
+       return view('home');
+   });
+
+4️⃣ Run your project:
+   php artisan serve
+
+5️⃣ Visit:
+   http://127.0.0.1:8000/home
+
+✅ You now have a working Blade view!
+
+-------------------------------------------------
+
+🧩 STEP 5.2 — USING BLADE LAYOUTS (AVOID REPEATED HTML)
+
+Blade Layouts let you reuse one main design (like a header/footer) for all pages.
+
+-------------------------------------------------
+STEP 1: CREATE A LAYOUT FILE
+-------------------------------------------------
+File:
+   resources/views/layouts/app.blade.php
+
+Code:
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>My Laravel Site - @yield('title')</title>
+   </head>
+   <body>
+       <h1>My Laravel Site</h1>
+       <hr>
+
+       <div>
+           @yield('content')
+       </div>
+   </body>
+   </html>
+
+🧠 Explanation:
+@yield('title') → placeholder for page title
+@yield('content') → placeholder for page content
+
+-------------------------------------------------
+STEP 2: MAKE A PAGE USE THAT LAYOUT
+-------------------------------------------------
+File:
+   resources/views/home.blade.php
+
+Code:
+   @extends('layouts.app')
+
+   @section('title', 'Home')
+
+   @section('content')
+       <p>Welcome to the Home Page!</p>
+   @endsection
+
+-------------------------------------------------
+STEP 3: ADD ANOTHER PAGE
+-------------------------------------------------
+File:
+   resources/views/about.blade.php
+
+Code:
+   @extends('layouts.app')
+
+   @section('title', 'About')
+
+   @section('content')
+       <p>This is the About Page.</p>
+   @endsection
+
+-------------------------------------------------
+
+✅ SUMMARY NOTES:
+- All HTML pages are in /resources/views/
+- Use .blade.php extension
+- @extends() → use a layout
+- @section() → define what to show
+- @yield() → placeholder in layout
+- Layouts make all pages share the same header/footer easily
+
+-------------------------------------------------

@@ -1,0 +1,104 @@
+LARAVEL NOTES - STEP 5.8 (BLADE LOOPS, IF STATEMENTS & INCLUDE VIEWS)
+---------------------------------------------------------------------
+
+🧠 GOAL:
+Learn how to display lists (loops), use conditions (if statements),
+and reuse parts of your layout (includes).
+
+---------------------------------------------------------------------
+🏁 STEP 1 — CREATE A ROUTE THAT SENDS DATA
+---------------------------------------------------------------------
+
+File: routes/web.php
+
+Route::get('/students', function () {
+    $students = [
+        ['name' => 'Paul', 'course' => 'BSIT'],
+        ['name' => 'Jane', 'course' => 'BSCS'],
+        ['name' => 'Marco', 'course' => 'BSIT'],
+        ['name' => 'Ella', 'course' => 'BSHM']
+    ];
+
+    return view('students', compact('students'));
+});
+
+🧩 Explanation:
+- This creates the route /students
+- It sends an array of students to the view
+- Each student has a name and a course
+
+---------------------------------------------------------------------
+🧩 STEP 2 — CREATE THE VIEW FILE
+---------------------------------------------------------------------
+
+File: resources/views/students.blade.php
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+    {{-- Include the navbar --}}
+    @include('navbar')
+
+    <h1>Student List</h1>
+
+    <ul>
+        @foreach($students as $student)
+            <li>
+                <strong>{{ $student['name'] }}</strong> - {{ $student['course'] }}
+
+                {{-- If condition --}}
+                @if($student['course'] == 'BSIT')
+                    <span>🖥️ IT Student</span>
+                @else
+                    <span>📚 Other Course</span>
+                @endif
+            </li>
+        @endforeach
+    </ul>
+</body>
+</html>
+
+🧠 Explanation:
+- @foreach → loops through each student
+- {{ }} → displays the value
+- @if / @else → adds condition
+- @include('navbar') → shows another view (navbar)
+
+---------------------------------------------------------------------
+🧭 STEP 3 — CREATE A NAVBAR (INCLUDE EXAMPLE)
+---------------------------------------------------------------------
+
+File: resources/views/navbar.blade.php
+
+<nav>
+    <a href="/home">Home</a> |
+    <a href="/about">About</a> |
+    <a href="/students">Students</a>
+</nav>
+<hr>
+
+✅ The navbar can be reused in any page using:
+@include('navbar')
+
+---------------------------------------------------------------------
+🧪 STEP 4 — RUN AND TEST
+---------------------------------------------------------------------
+
+In terminal:
+php artisan serve
+
+Visit in browser:
+http://127.0.0.1:8000/students
+
+✅ Expected Output:
+- Navbar at the top
+- List of students
+- Label 🖥️ IT Student for BSIT only
+- Label 📚 Other Course for others
+
+---------------------------------------------------------------------
+💡 BONUS IDEA:
+You can use the same @include('navbar') in your home
