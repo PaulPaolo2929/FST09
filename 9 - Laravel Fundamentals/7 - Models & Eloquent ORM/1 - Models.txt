@@ -1,0 +1,61 @@
+LARAVEL COMPLETE NOTES — STEP 7: MODELS & ELOQUENT ORM
+======================================================
+
+🧠 WHAT IS A MODEL?
+-------------------
+A **Model** is a PHP class that represents a database table.
+
+If you have a `students` table → you’ll create a `Student` model.
+
+This model lets you interact with the table easily using code instead of SQL.
+
+✅ Example:
+   Instead of writing SQL like:
+      SELECT * FROM students;
+   You can simply write:
+      Student::all();
+
+That’s what we call **Eloquent ORM**.
+
+---
+
+💡 WHAT IS ELOQUENT ORM?
+------------------------
+**Eloquent** is Laravel’s built-in ORM (Object Relational Mapper).
+It lets you talk to your database using **simple PHP syntax**.
+
+You don’t need to type SQL queries — Eloquent handles it.
+
+📘 Example:
+   Student::all(); → Get all students
+   Student::find(1); → Get student with ID 1
+   Student::create([...]); → Insert new student
+   $student->update([...]); → Update student
+   $student->delete(); → Delete student
+
+---
+
+🏗️ STEP 1 — CREATE A MODEL
+---------------------------
+Run this command:
+   php artisan make:model Student
+
+✅ This creates:
+   app/Models/Student.php
+
+Open that file — it should look like this:
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Student extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['name', 'email'];
+}

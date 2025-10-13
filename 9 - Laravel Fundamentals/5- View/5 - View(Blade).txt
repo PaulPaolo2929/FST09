@@ -5,6 +5,8 @@ LARAVEL NOTES - STEP 5.8 (BLADE LOOPS, IF STATEMENTS & INCLUDE VIEWS)
 Learn how to display lists (loops), use conditions (if statements),
 and reuse parts of your layout (includes).
 
+Views = The part users see (the front-end HTML).
+Blade = Laravel’s special templating engine that makes HTML dynamic (you can use variables, loops, conditions, etc., inside your HTML).
 ---------------------------------------------------------------------
 🏁 STEP 1 — CREATE A ROUTE THAT SENDS DATA
 ---------------------------------------------------------------------
